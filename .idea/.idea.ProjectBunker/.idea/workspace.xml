@@ -16,7 +16,16 @@
   <component name="ChangeListManager">
     <list default="true" id="3ce22ad5-7faa-4860-a4f4-cb9c11175bd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +39,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/MonsterObject.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/MonsterObject.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -225,6 +235,7 @@
       <workItem from="1775702023898" duration="262000" />
       <workItem from="1776110226876" duration="1650000" />
       <workItem from="1776111941373" duration="4147000" />
+      <workItem from="1776116233155" duration="3488000" />
     </task>
     <servers />
   </component>

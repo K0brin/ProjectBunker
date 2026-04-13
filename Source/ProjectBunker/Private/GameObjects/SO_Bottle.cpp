@@ -3,8 +3,18 @@
 
 #include "GameObjects/SO_Bottle.h"
 
-//on player collision make a sound
-void ASO_Bottle::MakeSound()
+// Sets default values
+ASO_Bottle::ASO_Bottle()
 {
-	Super::MakeSound();
+}
+
+void ASO_Bottle::BeginPlay()
+{
+	Super::BeginPlay();
+}
+
+//on player collision make a sound
+void ASO_Bottle::MakeSound(int soundTier)
+{
+	Super::MakeSound(soundTier);
 }

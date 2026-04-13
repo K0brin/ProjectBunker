@@ -15,5 +15,5 @@ class ASO_Crate : public ASoundObject
 	GENERATED_BODY()
 
 public:
-	virtual void MakeSound() override;
+	virtual void MakeSound(int soundTier) override;
 };

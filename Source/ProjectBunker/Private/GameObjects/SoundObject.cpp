@@ -3,6 +3,9 @@
 
 #include "GameObjects/SoundObject.h"
 
+#include "Kismet/GameplayStatics.h"
+#include "Systems/SoundManager.h"
+
 // Sets default values
 ASoundObject::ASoundObject()
 {
@@ -18,9 +21,10 @@ void ASoundObject::BeginPlay()
 	
 }
 
-void ASoundObject::MakeSound()
+void ASoundObject::MakeSound(int soundTier)
 {
-	
+	ASoundManager* soundManager = Cast<ASoundManager>(UGameplayStatics::GetActorOfClass(GetWorld(), ASoundManager::StaticClass()));
+	soundManager->SendSound(soundTier);
 }
 
 // Called every frame

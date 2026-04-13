@@ -24,7 +24,7 @@ protected:
 public:
 	UFUNCTION(BlueprintCallable) void SendSound(int soundTier);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) AMonsterManager* monsterManager;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) AMonsterManager* monsterManager = nullptr;
 	
 public:	
 	// Called every frame

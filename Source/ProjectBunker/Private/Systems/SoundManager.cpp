@@ -17,7 +17,6 @@ ASoundManager::ASoundManager()
 void ASoundManager::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 void ASoundManager::SendSound(int soundTier)

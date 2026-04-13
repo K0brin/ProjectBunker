@@ -4,7 +4,7 @@
 #include "GameObjects/SO_Crate.h"
 
 //make sound on interval as being pushed
-void ASO_Crate::MakeSound()
+void ASO_Crate::MakeSound(int soundTier)
 {
-	Super::MakeSound();
+	Super::MakeSound(soundTier);
 }

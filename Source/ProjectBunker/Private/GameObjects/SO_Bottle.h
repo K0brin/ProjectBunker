@@ -13,7 +13,12 @@ UCLASS()
 class ASO_Bottle : public ASoundObject
 {
 	GENERATED_BODY()
-
 public:
-	virtual void MakeSound() override;
+	ASO_Bottle();
+
+protected:
+	virtual void BeginPlay() override;
+	
+public:
+	virtual void MakeSound(int soundTier) override;
 };

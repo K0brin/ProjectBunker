@@ -20,7 +20,7 @@ protected:
 	virtual void BeginPlay() override;
 
 public:
-	virtual void MakeSound();
+	UFUNCTION(BlueprintCallable) virtual void MakeSound(int soundTier);
 	
 public:	
 	// Called every frame
