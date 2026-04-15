@@ -6,7 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "SoundManager.generated.h"
 
-class AMonsterManager;
+class AWorldObjectSpawner;
 
 UCLASS()
 class ASoundManager : public AActor
@@ -22,9 +22,7 @@ protected:
 	virtual void BeginPlay() override;
 
 public:
-	UFUNCTION(BlueprintCallable) void SendSound(int soundTier);
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) AMonsterManager* monsterManager = nullptr;
+UFUNCTION(BlueprintCallable) void SpawnWorldObjects(TArray<AWorldObjectSpawner*> spawnerArray);
 	
 public:	
 	// Called every frame

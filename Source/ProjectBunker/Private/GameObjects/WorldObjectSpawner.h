@@ -4,20 +4,24 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "MonsterManager.generated.h"
+#include "WorldObjectSpawner.generated.h"
 
 UCLASS()
-class AMonsterManager : public AActor
+class AWorldObjectSpawner : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	AMonsterManager();
+	AWorldObjectSpawner();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) TSubclassOf<AActor> objectToSpawn;
+	
 	
 public:	
 	// Called every frame

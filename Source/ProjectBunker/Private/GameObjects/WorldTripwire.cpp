@@ -1,10 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Systems/MonsterManager.h"
+#include "GameObjects/WorldTripwire.h"
 
 // Sets default values
-AMonsterManager::AMonsterManager()
+AWorldTripwire::AWorldTripwire()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -12,14 +12,14 @@ AMonsterManager::AMonsterManager()
 }
 
 // Called when the game starts or when spawned
-void AMonsterManager::BeginPlay()
+void AWorldTripwire::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
 // Called every frame
-void AMonsterManager::Tick(float DeltaTime)
+void AWorldTripwire::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 

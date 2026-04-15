@@ -4,6 +4,9 @@
 #include "Systems/SoundManager.h"
 
 #include "MonsterManager.h"
+#include "GameObjects/WorldBottle.h"
+#include "GameObjects/WorldObjectSpawner.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ASoundManager::ASoundManager()
@@ -17,13 +20,30 @@ ASoundManager::ASoundManager()
 void ASoundManager::BeginPlay()
 {
 	Super::BeginPlay();
+
+	//find all spawners and add to array
+	TArray<AActor*> spawnerActors;
+	TArray<AWorldObjectSpawner*> worldObjectSpawners;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AWorldObjectSpawner::StaticClass(),  spawnerActors);
+	for (AActor* spawner : spawnerActors)
+	{
+		worldObjectSpawners.Add(Cast<AWorldObjectSpawner>(spawner));
+	}
+
+	//run function for spawning object type - require input array
+	SpawnWorldObjects(worldObjectSpawners);
 }
 
-void ASoundManager::SendSound(int soundTier)
+void ASoundManager::SpawnWorldObjects(TArray<AWorldObjectSpawner*> spawnerArray)
 {
-	//send sound tier to monster manager (1-3)
-	monsterManager->RecieveSound(soundTier);
+
+	for (AWorldObjectSpawner* spawner : spawnerArray)
+	{
+		//find which object it wants to spawn, find the position or designated spawn position and spawn it
+	}
+	
 }
+
 
 // Called every frame
 void ASoundManager::Tick(float DeltaTime)

@@ -16,16 +16,20 @@
   <component name="ChangeListManager">
     <list default="true" id="3ce22ad5-7faa-4860-a4f4-cb9c11175bd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/DataAssets/HotbarSlot.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/DataAssets/HotbarSlot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/InventoryManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/InventoryManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SystemManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SystemManager.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +44,17 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Epic Games/UE_5.6/Engine/Source/Runtime/Engine/Private/GameplayStatics.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/MonsterObject.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/MonsterObject.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldBottle.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldBottle.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldCrate.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldCrate.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldObjectSpawner.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldObjectSpawner.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldTripwire.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldTripwire.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/InventoryManager.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.h" root0="FORCE_HIGHLIGHTING" />
@@ -75,6 +82,7 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
@@ -235,7 +243,10 @@
       <workItem from="1775702023898" duration="262000" />
       <workItem from="1776110226876" duration="1650000" />
       <workItem from="1776111941373" duration="4147000" />
-      <workItem from="1776116233155" duration="3488000" />
+      <workItem from="1776116233155" duration="3517000" />
+      <workItem from="1776284334972" duration="2689000" />
+      <workItem from="1776288744655" duration="786000" />
+      <workItem from="1776289610055" duration="3405000" />
     </task>
     <servers />
   </component>

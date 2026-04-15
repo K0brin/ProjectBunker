@@ -23,7 +23,6 @@ void ASystemManager::BeginPlay()
 	CreateSoundManager();
 	CreateMonsterManager();
 	CreateInventoryManager();
-	ActiveSoundManager->monsterManager = ActiveMonsterManager;
 }
 
 // Called every frame

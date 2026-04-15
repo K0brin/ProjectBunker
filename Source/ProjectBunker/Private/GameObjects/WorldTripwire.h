@@ -4,24 +4,24 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "SoundObject.generated.h"
+#include "WorldTripwire.generated.h"
 
 UCLASS()
-class ASoundObject : public AActor
+class AWorldTripwire : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	ASoundObject();
+	AWorldTripwire();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:
-	UFUNCTION(BlueprintCallable) virtual void MakeSound(int soundTier);
-	
+	//sound and delayed explosion when collided into
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
