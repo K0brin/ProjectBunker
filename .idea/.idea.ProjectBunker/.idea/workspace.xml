@@ -16,20 +16,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3ce22ad5-7faa-4860-a4f4-cb9c11175bd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/DataAssets/HotbarSlot.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/DataAssets/HotbarSlot.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Bottle.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SO_Crate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/SoundObject.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/InventoryManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/InventoryManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SystemManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SystemManager.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +233,7 @@
       <workItem from="1776116233155" duration="3517000" />
       <workItem from="1776284334972" duration="2689000" />
       <workItem from="1776288744655" duration="786000" />
-      <workItem from="1776289610055" duration="3405000" />
+      <workItem from="1776289610055" duration="3512000" />
     </task>
     <servers />
   </component>
@@ -276,6 +263,11 @@
           <url>file://$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/InventoryManager.h</url>
           <line>4</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Source/ProjectBunker/Private/DataAssets/HotbarSlot.h</url>
+          <line>4</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -10,6 +10,8 @@
  * 
  */
 
+class ASkeletalMeshActor;
+
 UENUM()
 enum class EObjectType : uint8
 {
@@ -26,7 +28,7 @@ class UHotbarSlot : public UPrimaryDataAsset
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) FSkeletalMeshComponent* HeldGameObject;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) ASkeletalMeshActor* HeldGameObject;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) EObjectType ObjectType;
 	//sprite definition
 	
