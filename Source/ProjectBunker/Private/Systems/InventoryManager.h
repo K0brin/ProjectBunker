@@ -7,6 +7,7 @@
 #include "InventoryManager.generated.h"
 
 
+enum class EHeldObjectType : uint8;
 class UHotbarSlot;
 
 UCLASS()
@@ -24,8 +25,10 @@ protected:
 
 public: //house actions depending on equipped item using EObjectType
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<UHotbarSlot*> HotbarSlots;
-
-public:	
+	UPROPERTY(BlueprintReadWrite) EHeldObjectType HeldObjectType;
+	
+	UFUNCTION(BlueprintCallable) void SetHeldItem(int32 index);
+	UFUNCTION(BlueprintCallable) void UseHeldItem();
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 

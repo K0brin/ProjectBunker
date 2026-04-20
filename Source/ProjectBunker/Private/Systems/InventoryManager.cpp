@@ -3,6 +3,8 @@
 
 #include "Systems/InventoryManager.h"
 
+#include "DataAssets/HotbarSlot.h"
+
 // Sets default values
 AInventoryManager::AInventoryManager()
 {
@@ -16,6 +18,18 @@ void AInventoryManager::BeginPlay()
 {
 	Super::BeginPlay();
 	
+}
+
+void AInventoryManager::SetHeldItem(int32 index)
+{
+	//spawn the static mesh (heldgameobject)
+	//set active item name
+	HeldObjectType = HotbarSlots[index]->ObjectType;
+}
+
+void AInventoryManager::UseHeldItem()
+{
+	// call on left click when an item is being held
 }
 
 // Called every frame

@@ -10,26 +10,16 @@
  * 
  */
 
+enum class EHeldObjectType : uint8;
 class ASkeletalMeshActor;
 
-UENUM()
-enum class EObjectType : uint8
-{
-	Handgun,
-	Flashlight,
-	Bottle,
-	Grenade,
-	Healing,
-	BoltCutters
-};
-
-UCLASS()
+UCLASS(BlueprintType)
 class UHotbarSlot : public UPrimaryDataAsset
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) ASkeletalMeshActor* HeldGameObject;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) EObjectType ObjectType;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) UStaticMesh* HeldGameObject;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) EHeldObjectType ObjectType;
 	//sprite definition
 	
 };
