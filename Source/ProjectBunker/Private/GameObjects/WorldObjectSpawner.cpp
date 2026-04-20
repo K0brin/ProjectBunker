@@ -2,6 +2,7 @@
 
 
 #include "GameObjects/WorldObjectSpawner.h"
+#include "DrawDebugHelpers.h"
 
 // Sets default values
 AWorldObjectSpawner::AWorldObjectSpawner()
@@ -16,7 +17,21 @@ void AWorldObjectSpawner::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//function to check objectToSpawn type - show debug of outline of object
+	//function to check objectToSpawn type - show debug of outline of object in editor
+	
+}
+
+void AWorldObjectSpawner::OnConstruction(const FTransform& Transform)
+{
+	Super::OnConstruction(Transform);
+
+	FColor BoxColor = FColor::White;
+	if (SpawnType == ESpawnObjectType::Bottle)
+	{
+		
+	}
+	
+	DrawDebugBox(GetWorld(), GetActorLocation(), FVector(20,20,20), FColor::Green, false, 0.1f, 0, 2.0f );
 	
 }
 
