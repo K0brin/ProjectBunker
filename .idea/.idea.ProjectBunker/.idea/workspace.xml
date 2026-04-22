@@ -16,12 +16,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3ce22ad5-7faa-4860-a4f4-cb9c11175bd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/BP_BunkerGameInstance.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/BP_BunkerGameInstance.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldObjectSpawner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldObjectSpawner.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldObjectSpawner.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldObjectSpawner.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +247,7 @@
       <workItem from="1776289610055" duration="3534000" />
       <workItem from="1776715461381" duration="9471000" />
       <workItem from="1776888174003" duration="1917000" />
-      <workItem from="1776892180345" duration="2655000" />
+      <workItem from="1776892180345" duration="3285000" />
     </task>
     <servers />
   </component>
