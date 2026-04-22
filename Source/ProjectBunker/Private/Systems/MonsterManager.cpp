@@ -3,6 +3,8 @@
 
 #include "Systems/MonsterManager.h"
 
+#include "GameObjects/MonsterCharacter.h"
+
 // Sets default values
 AMonsterManager::AMonsterManager()
 {
@@ -16,6 +18,20 @@ void AMonsterManager::BeginPlay()
 {
 	Super::BeginPlay();
 	
+}
+
+void AMonsterManager::AdvanceStage(int soundTier)
+{
+}
+
+void AMonsterManager::DecrementStage(int decrementValue)
+{
+}
+
+void AMonsterManager::StartRoaming(int spawnIndex)
+{
+	//Spawn Character - after spawned blackboard should start actions
+	ActiveMonsterPawn = GetWorld()->SpawnActor<AMonsterCharacter>(MonsterToSpawn, SpawnLocations[spawnIndex], FRotator::ZeroRotator);
 }
 
 // Called every frame

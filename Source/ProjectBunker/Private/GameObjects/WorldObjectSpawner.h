@@ -32,7 +32,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) TSubclassOf<AWorldBottle> BottleSpawn; //set in code depending on enum type
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) TSubclassOf<AWorldCrate> CrateSpawn; //set in code depending on enum type
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) TSubclassOf<AWorldTripwire> TripwireSpawn; //set in code depending on enum type
-
+	//make spawn reference on spawn manager not held on each spawner - bad for performance - have spawn manager go through each and spawn
 	
 public:
 	// Called every frame
