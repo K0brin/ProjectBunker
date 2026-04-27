@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "DataAssets/HeldObjectType.h"
 #include "GameFramework/Actor.h"
 #include "InventoryManager.generated.h"
 
@@ -24,11 +25,15 @@ protected:
 	virtual void BeginPlay() override;
 
 public: //house actions depending on equipped item using EObjectType
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<UHotbarSlot*> HotbarSlots;
-	UPROPERTY(BlueprintReadWrite) EHeldObjectType HeldObjectType;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<UHotbarSlot*> HotbarInventory;
+	UPROPERTY(BlueprintReadWrite) EHeldObjectType HeldObjectType = EHeldObjectType::None;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere) int HeldObjectIndex = -1;
 	
 	UFUNCTION(BlueprintCallable) void SetHeldItem(int32 index);
 	UFUNCTION(BlueprintCallable) void UseHeldItem();
+	UFUNCTION(BlueprintCallable) void FireGun();
+	UFUNCTION(BlueprintCallable) void ThrowItem(bool isExplosive);
+	UFUNCTION(BlueprintCallable) void Heal();
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 

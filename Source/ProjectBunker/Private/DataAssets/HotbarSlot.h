@@ -18,8 +18,9 @@ class UHotbarSlot : public UPrimaryDataAsset
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) UStaticMesh* HeldGameObject;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) EHeldObjectType ObjectType;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) int CurrentStack = 0;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) int MaxStackSize = 1;
 	//sprite definition
 	
 };

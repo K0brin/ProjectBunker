@@ -16,6 +16,18 @@
   <component name="ChangeListManager">
     <list default="true" id="3ce22ad5-7faa-4860-a4f4-cb9c11175bd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/BP_InventoryManager.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/BP_InventoryManager.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_Bottle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_Bottle.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_Flashlight.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_Gun.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_Gun.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Master/Models/Bottle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Models/Bottle.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Master/Models/Gun.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Models/Gun.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/DataAssets/HeldObjectType.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/DataAssets/HeldObjectType.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/DataAssets/HotbarSlot.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/DataAssets/HotbarSlot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/InventoryManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/InventoryManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/InventoryManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/InventoryManager.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,6 +260,7 @@
       <workItem from="1776715461381" duration="9471000" />
       <workItem from="1776888174003" duration="1917000" />
       <workItem from="1776892180345" duration="3285000" />
+      <workItem from="1777320213793" duration="8903000" />
     </task>
     <servers />
   </component>

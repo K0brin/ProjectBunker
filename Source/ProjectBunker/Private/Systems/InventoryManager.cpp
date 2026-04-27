@@ -22,14 +22,45 @@ void AInventoryManager::BeginPlay()
 
 void AInventoryManager::SetHeldItem(int32 index)
 {
-	//spawn the static mesh (heldgameobject)
+	//set cooresponding mesh to visible on player pawn, set all others to not visible (done in blueprint)
+	
 	//set active item name
-	HeldObjectType = HotbarSlots[index]->ObjectType;
+	HeldObjectIndex = index;
+	HeldObjectType = HotbarInventory[index]->ObjectType;
+	
 }
 
 void AInventoryManager::UseHeldItem()
 {
-	// call on left click when an item is being held
+	// call on left click when an item is being held - call in blueprint
+
+	if (HeldObjectIndex != -1 && HotbarInventory[HeldObjectIndex]->CurrentStack >= 1 )
+	{
+		switch (HeldObjectType)
+		{
+		case EHeldObjectType::Handgun: FireGun(); //Fire Gun
+		case EHeldObjectType::Bottle: ThrowItem(false); //Throw Bottle
+		case EHeldObjectType::Grenade: ThrowItem(true); //Throw Grenade
+		case EHeldObjectType::Healing: Heal(); //Use Heals
+		case EHeldObjectType::BoltCutters: break; //Use BoltCutters
+		case EHeldObjectType::None: break; //Holding Nothing
+		}
+	}
+}
+
+void AInventoryManager::FireGun()
+{
+	//basic gun logic
+}
+
+void AInventoryManager::ThrowItem(bool isExplosive)
+{
+	//spawn throwable actor -> apply force to object -> when object hits surface -> make sound and explode (based on isExplosive)
+}
+
+void AInventoryManager::Heal()
+{
+	//heal designated health amount
 }
 
 // Called every frame

@@ -12,11 +12,11 @@ UENUM()
 enum class EHeldObjectType : uint8
 {
 	Handgun,
-	Flashlight,
 	Bottle,
 	Grenade,
 	Healing,
-	BoltCutters
+	BoltCutters,
+	None
 };
 
 class HeldObjectType
