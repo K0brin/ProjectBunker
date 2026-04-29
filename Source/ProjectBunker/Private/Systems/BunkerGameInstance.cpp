@@ -7,12 +7,21 @@
 #include "MonsterManager.h"
 #include "SoundManager.h"
 
+void UBunkerGameInstance::OnStart()
+{
+    Super::OnStart();
+    CreateSoundManager();
+    CreateMonsterManager();
+    ActiveMonsterManager->SoundManager = ActiveSoundManager;
+    CreateInventoryManager();
+}
+
 void UBunkerGameInstance::Init()
 {
 	Super::Init();
 
 	
-	if (GetWorld())
+	/*if (GetWorld())
 	{
 		{UE_LOG(LogTemp, Warning, TEXT("Started spawning"));}
 		CreateSoundManager();
@@ -20,7 +29,7 @@ void UBunkerGameInstance::Init()
 		ActiveMonsterManager->SoundManager = ActiveSoundManager;
 		CreateInventoryManager();
 	}
-	else{UE_LOG(LogTemp, Warning, TEXT("did not spawn"));}
+	else{UE_LOG(LogTemp, Warning, TEXT("did not spawn"));}*/
 }
 
 void UBunkerGameInstance::CreateMonsterManager()

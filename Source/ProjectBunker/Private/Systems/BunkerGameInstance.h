@@ -19,7 +19,7 @@ class UBunkerGameInstance : public UGameInstance
 
 public:
 	virtual void Init() override;
-	
+	virtual void OnStart() override;
 	
 public:
 	UFUNCTION(BlueprintCallable) void CreateMonsterManager();
