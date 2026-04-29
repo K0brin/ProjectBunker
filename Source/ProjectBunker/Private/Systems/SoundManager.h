@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "SoundManager.generated.h"
 
+class AWorldBottle;
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSoundEmitted, int32, soundVolume);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSoundEmittedLocation, FVector, soundLocation);
 
@@ -27,7 +28,7 @@ protected:
 public:
 	UFUNCTION(BlueprintCallable) void SpawnWorldObjects(TArray<AWorldObjectSpawner*> spawnerArray);
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) TSubclassOf<AActor> BottleToSpawn;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) TSubclassOf<AWorldBottle> BottleToSpawn;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) TSubclassOf<AActor> CrateToSpawn;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) TSubclassOf<AActor> TripwireToSpawn;
 	

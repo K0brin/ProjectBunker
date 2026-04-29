@@ -46,8 +46,10 @@ void ASoundManager::SpawnWorldObjects(TArray<AWorldObjectSpawner*> spawnerArray)
 		{
 		case 1:
 			{
-				AWorldBottle* spawnedBottle = GetWorld()->SpawnActor<AWorldBottle>(BottleToSpawn, spawner->GetActorLocation(), FRotator::ZeroRotator);
-				if (!spawnedBottle) break; 
+				if (!BottleToSpawn) break;
+				AWorldBottle* spawnedBottle = GetWorld()->SpawnActor<AWorldBottle>(
+					BottleToSpawn, spawner->GetActorLocation(), FRotator::ZeroRotator);
+				if (!spawnedBottle) break;
 				spawnedBottle->SoundManager = this;
 				break;
 			}

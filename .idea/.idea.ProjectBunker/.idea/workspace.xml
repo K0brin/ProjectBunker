@@ -14,12 +14,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ce22ad5-7faa-4860-a4f4-cb9c11175bd7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/AI/Behavior/BT_RoamingMonster.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/AI/Behavior/BT_RoamingMonster.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/AI/Behavior/Tasks/BTTask_GoToSound.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/AI/Behavior/Tasks/BTTask_GoToSound.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/Characters/BP_MonsterAIController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/Characters/BP_MonsterAIController.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/Characters/BP_MonsterCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/Characters/BP_MonsterCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_BoltCutters.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_BoltCutters.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_Bottle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_Bottle.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_Grenade.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_Grenade.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_Gun.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_Gun.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_Heals.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/DataAssets/Slot_Heals.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +256,9 @@
       <workItem from="1776892180345" duration="3285000" />
       <workItem from="1777320213793" duration="8903000" />
       <workItem from="1777424520020" duration="13302000" />
-      <workItem from="1777440515084" duration="4474000" />
+      <workItem from="1777440515084" duration="4500000" />
+      <workItem from="1777446647342" duration="2586000" />
+      <workItem from="1777450261698" duration="291000" />
     </task>
     <servers />
   </component>
