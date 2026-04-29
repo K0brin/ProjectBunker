@@ -24,7 +24,9 @@ protected:
 public:
 	//make sound when bumped into
 	UPROPERTY(BlueprintReadWrite, EditAnywhere) ASoundManager* SoundManager;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly) UStaticMeshComponent* MeshComponent;
 	
+	UFUNCTION()void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor,UPrimitiveComponent* OtherComp, FVector NormalImpulse,const FHitResult& Hit);
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

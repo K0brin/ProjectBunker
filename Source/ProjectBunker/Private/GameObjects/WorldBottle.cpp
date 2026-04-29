@@ -3,6 +3,8 @@
 
 #include "GameObjects/WorldBottle.h"
 
+#include "Systems/SoundManager.h"
+
 // Sets default values
 AWorldBottle::AWorldBottle()
 {
@@ -15,7 +17,15 @@ AWorldBottle::AWorldBottle()
 void AWorldBottle::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	MeshComponent->OnComponentHit.AddDynamic(this, &AWorldBottle::OnHit);
+}
+
+void AWorldBottle::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+	if (OtherActor == GetWorld()->GetFirstPlayerController()->GetPawn())
+	{
+		SoundManager->EmitSound(3, this->GetActorLocation());
+	}
 }
 
 // Called every frame

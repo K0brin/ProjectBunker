@@ -15,23 +15,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3ce22ad5-7faa-4860-a4f4-cb9c11175bd7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectBunker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/AI/Behavior/BB_RoamingMonster.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/AI/Behavior/BB_RoamingMonster.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/AI/Behavior/BT_RoamingMonster.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/AI/Behavior/BT_RoamingMonster.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/BP_BunkerGameInstance.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/BP_BunkerGameInstance.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/WorldObjects/BP_WorldBottle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/WorldObjects/BP_WorldBottle.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/WorldObjects/BP_WorldCrate.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/WorldObjects/BP_WorldCrate.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Blueprints/WorldObjects/BP_WorldTripwire.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Blueprints/WorldObjects/BP_WorldTripwire.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/_Master/Levels/Lvl_Wing_01.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldBottle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldBottle.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldBottle.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldBottle.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldCrate.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldCrate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldObjectSpawner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldObjectSpawner.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldObjectSpawner.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldObjectSpawner.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldTripwire.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/GameObjects/WorldTripwire.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/BunkerGameInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/BunkerGameInstance.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/MonsterManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBunker/Private/Systems/SoundManager.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +248,7 @@
       <workItem from="1776888174003" duration="1917000" />
       <workItem from="1776892180345" duration="3285000" />
       <workItem from="1777320213793" duration="8903000" />
-      <workItem from="1777424520020" duration="8731000" />
+      <workItem from="1777424520020" duration="9367000" />
     </task>
     <servers />
   </component>
