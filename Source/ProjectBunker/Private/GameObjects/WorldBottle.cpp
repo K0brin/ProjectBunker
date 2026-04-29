@@ -12,7 +12,6 @@ AWorldBottle::AWorldBottle()
 	PrimaryActorTick.bCanEverTick = true;
 	MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
 	RootComponent = MeshComponent;
-
 }
 
 // Called when the game starts or when spawned
@@ -20,15 +19,31 @@ void AWorldBottle::BeginPlay()
 {
 	Super::BeginPlay();
 	MeshComponent->SetStaticMesh(MeshAsset);
+	MeshComponent->SetSimulatePhysics(true);
+	MeshComponent->SetCollisionProfileName(TEXT("BlockAll"));
+	MeshComponent->SetNotifyRigidBodyCollision(true);
+	MeshComponent->CanCharacterStepUpOn = ECB_No;
+	MeshComponent->SetMassOverrideInKg(NAME_None, 30.0f);
+	MeshComponent->SetLinearDamping(5.0f);
+	MeshComponent->SetAngularDamping(5.0f);
+	MeshComponent->SetWorldScale3D(FVector(0.1f));
 	MeshComponent->OnComponentHit.AddDynamic(this, &AWorldBottle::OnHit);
 }
 
 void AWorldBottle::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	if (OtherActor == GetWorld()->GetFirstPlayerController()->GetPawn())
+	if (GetWorldTimerManager().IsTimerActive(TimerHandle)) return;
+	
+	AActor* hitActor = OtherActor;
+	
+	GetWorldTimerManager().SetTimer(TimerHandle, [this, hitActor]()
 	{
-		SoundManager->EmitSound(3, this->GetActorLocation());
-	}
+		if (hitActor == GetWorld()->GetFirstPlayerController()->GetPawn())
+		{
+			SoundManager->EmitSound(2, GetActorLocation());
+		}
+	}, 0.1f, false);
+	
 }
 
 // Called every frame

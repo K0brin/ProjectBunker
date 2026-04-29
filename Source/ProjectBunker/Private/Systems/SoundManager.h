@@ -37,8 +37,8 @@ public:
 	{
 		UE_LOG(LogTemp, Log, TEXT("Emitting sound at volume: %d"), soundVolume);
 		UE_LOG(LogTemp, Log, TEXT("Emitting sound at location: %s"), *soundLocation.ToString());
-		OnSoundEmitted.Broadcast(soundVolume);
 		OnSoundEmittedLocation.Broadcast(soundLocation);
+		OnSoundEmitted.Broadcast(soundVolume);
 	}
 	
 public:	

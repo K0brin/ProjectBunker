@@ -44,20 +44,28 @@ void AMonsterManager::CheckRoaming()
 	if (CurrentStage == EEnemyStage::Roaming)
 	{
 		//Spawn Character - after spawned blackboard should start actions
-		ActiveMonsterPawn = GetWorld()->SpawnActor<AMonsterCharacter>(MonsterToSpawn, SpawnLocations[CurrentSection], FRotator::ZeroRotator);
-		
-		//get ai controller to have access to blackboard
-		AIController = Cast<AMonsterAIController>(ActiveMonsterPawn->GetController());
-		if (AIController)
+		if (!ActiveMonsterPawn)
 		{
-			//set blackboard sound location from value gained from delegate;
-			AIController->GetBlackboardComponent()->SetValueAsVector("SoundPosition", SoundPosition);
-			//set bool to start behavior tree process
-			AIController->GetBlackboardComponent()->SetValueAsBool("CanStart", true);
+			//delay a few seconds and play audio of spawning
+			
+			ActiveMonsterPawn = GetWorld()->SpawnActor<AMonsterCharacter>(MonsterToSpawn, SpawnLocations[CurrentSection], FRotator::ZeroRotator);
+			UE_LOG(LogTemp, Log, TEXT("Spawned Monster"));
+			
+			//get ai controller to have access to blackboard
+			AIController = Cast<AMonsterAIController>(ActiveMonsterPawn->GetController());
+			if (AIController)
+			{
+				//set blackboard sound location from value gained from delegate;
+				AIController->GetBlackboardComponent()->SetValueAsVector("SoundPosition", SoundPosition);
+				//set bool to start behavior tree process
+				AIController->GetBlackboardComponent()->SetValueAsBool("CanStart", true);
+			}
+			else
+			{
+				UE_LOG(LogTemp, Log, TEXT("Cannot Find AIController"));
+			}
 		}
-		
 	}
-	
 }
 
 void AMonsterManager::OnSoundRecieved(int32 soundVolume)
@@ -97,6 +105,6 @@ void AMonsterManager::OnSoundRecievedLocation(FVector soundLocation)
 void AMonsterManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	
 }
 

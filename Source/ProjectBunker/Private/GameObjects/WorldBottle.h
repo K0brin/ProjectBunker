@@ -28,6 +28,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)UStaticMesh* MeshAsset;
 	
 	UFUNCTION()void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor,UPrimitiveComponent* OtherComp, FVector NormalImpulse,const FHitResult& Hit);
+	
+	FTimerHandle TimerHandle;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

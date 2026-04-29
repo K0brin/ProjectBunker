@@ -10,8 +10,14 @@ class AMonsterAIController;
 class ASoundManager;
 class AMonsterCharacter;
 
-UENUM()
-enum class EEnemyStage : int8 { OutofWing, InWing, InSection, Roaming, None };
+UENUM(BlueprintType)
+enum class EEnemyStage : uint8 
+{	OutofWing UMETA(DisplayName = "OutofWing"), 
+	InWing UMETA(DisplayName = "InWing"), 
+	InSection UMETA(DisplayName = "InSection"), 
+	Roaming UMETA(DisplayName = "Roaming"), 
+	None UMETA(DisplayName = "None")
+};
 
 UCLASS()
 class AMonsterManager : public AActor
@@ -27,13 +33,13 @@ protected:
 	virtual void BeginPlay() override;
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) EEnemyStage CurrentStage = EEnemyStage::None;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) EEnemyStage CurrentStage = EEnemyStage::OutofWing;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) TSubclassOf<AActor> MonsterToSpawn;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) AMonsterCharacter* ActiveMonsterPawn;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) AMonsterCharacter* ActiveMonsterPawn = nullptr;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FVector> SpawnLocations;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 CurrentSection; //used as index for spawn location when spawning in roam
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) FVector SoundPosition; //used as index for spawn location when spawning in roam
-	UPROPERTY() AMonsterAIController* AIController = nullptr;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) AMonsterAIController* AIController = nullptr;
 	
 	UFUNCTION(BlueprintCallable) void ChangeStage(int soundVolume);
 	UFUNCTION(BlueprintCallable) void CheckRoaming();
