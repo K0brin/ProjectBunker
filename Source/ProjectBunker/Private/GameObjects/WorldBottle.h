@@ -24,7 +24,8 @@ protected:
 public:
 	//make sound when bumped into
 	UPROPERTY(BlueprintReadWrite, EditAnywhere) ASoundManager* SoundManager;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly) UStaticMeshComponent* MeshComponent;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) UStaticMeshComponent* MeshComponent;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)UStaticMesh* MeshAsset;
 	
 	UFUNCTION()void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor,UPrimitiveComponent* OtherComp, FVector NormalImpulse,const FHitResult& Hit);
 public:	

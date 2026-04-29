@@ -10,6 +10,8 @@ AWorldBottle::AWorldBottle()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
+	RootComponent = MeshComponent;
 
 }
 
@@ -17,6 +19,7 @@ AWorldBottle::AWorldBottle()
 void AWorldBottle::BeginPlay()
 {
 	Super::BeginPlay();
+	MeshComponent->SetStaticMesh(MeshAsset);
 	MeshComponent->OnComponentHit.AddDynamic(this, &AWorldBottle::OnHit);
 }
 
