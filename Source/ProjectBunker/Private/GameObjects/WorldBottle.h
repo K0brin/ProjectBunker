@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "WorldBottle.generated.h"
 
+class ASoundManager;
+
 UCLASS()
 class AWorldBottle : public AActor
 {
@@ -21,6 +23,7 @@ protected:
 
 public:
 	//make sound when bumped into
+	UPROPERTY(BlueprintReadWrite, EditAnywhere) ASoundManager* SoundManager;
 	
 public:	
 	// Called every frame

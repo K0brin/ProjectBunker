@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "MonsterManager.generated.h"
 
+class AMonsterAIController;
+class ASoundManager;
 class AMonsterCharacter;
 
 UENUM()
@@ -29,10 +31,17 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) TSubclassOf<AActor> MonsterToSpawn;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) AMonsterCharacter* ActiveMonsterPawn;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FVector> SpawnLocations;
-
-	UFUNCTION(BlueprintCallable) void AdvanceStage(int soundTier);
-	UFUNCTION(BlueprintCallable) void DecrementStage(int decrementValue);
-	UFUNCTION(BlueprintCallable) void StartRoaming(int spawnIndex);
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 CurrentSection; //used as index for spawn location when spawning in roam
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) FVector SoundPosition; //used as index for spawn location when spawning in roam
+	UPROPERTY() AMonsterAIController* AIController = nullptr;
+	
+	UFUNCTION(BlueprintCallable) void ChangeStage(int soundVolume);
+	UFUNCTION(BlueprintCallable) void CheckRoaming();
+	
+	//Sound Receiving
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) ASoundManager* SoundManager;
+	UFUNCTION(BlueprintCallable) void OnSoundRecieved(int32 soundVolume);
+	UFUNCTION(BlueprintCallable) void OnSoundRecievedLocation(FVector soundLocation);
 	
 public:	
 	// Called every frame

@@ -5,7 +5,9 @@
 
 #include "MonsterManager.h"
 #include "GameObjects/WorldBottle.h"
+#include "GameObjects/WorldCrate.h"
 #include "GameObjects/WorldObjectSpawner.h"
+#include "GameObjects/WorldTripwire.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -40,6 +42,31 @@ void ASoundManager::SpawnWorldObjects(TArray<AWorldObjectSpawner*> spawnerArray)
 	for (AWorldObjectSpawner* spawner : spawnerArray)
 	{
 		//find which object it wants to spawn, find the position or designated spawn position and spawn it
+		switch (spawner->SpawnType)
+		{
+		case 1:
+			{
+				AWorldBottle* spawnedBottle = GetWorld()->SpawnActor<AWorldBottle>(BottleToSpawn, spawner->GetActorLocation(), FRotator::ZeroRotator);
+				if (!spawnedBottle) break; 
+				spawnedBottle->SoundManager = this;
+				break;
+			}
+		case 2:
+			{
+				AWorldCrate* spawnedCrate = GetWorld()->SpawnActor<AWorldCrate>(CrateToSpawn, spawner->GetActorLocation(), FRotator::ZeroRotator);
+				if (!spawnedCrate) break; 
+				spawnedCrate->SoundManager = this;
+				break;
+			}
+		case 3:
+			{
+				AWorldTripwire* spawnedTripwire = GetWorld()->SpawnActor<AWorldTripwire>(TripwireToSpawn, spawner->GetActorLocation(), FRotator::ZeroRotator);
+				if (!spawnedTripwire) break; 
+				spawnedTripwire->SoundManager = this;
+				break;
+			}
+		default: break;
+		}
 	}
 	
 }

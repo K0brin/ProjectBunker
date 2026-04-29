@@ -3,6 +3,9 @@
 
 #include "Systems/MonsterManager.h"
 
+#include "SoundManager.h"
+#include "BehaviorTree/BlackboardComponent.h"
+#include "GameObjects/MonsterAIController.h"
 #include "GameObjects/MonsterCharacter.h"
 
 // Sets default values
@@ -18,20 +21,76 @@ void AMonsterManager::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	if (SoundManager)
+	{
+		SoundManager->OnSoundEmittedLocation.AddDynamic(this, &AMonsterManager::OnSoundRecievedLocation);
+		SoundManager->OnSoundEmitted.AddDynamic(this, &AMonsterManager::OnSoundRecieved);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("SoundManager reference not found in monster manager"));
+	}
+	
 }
 
-void AMonsterManager::AdvanceStage(int soundTier)
+void AMonsterManager::ChangeStage(int soundVolume)
 {
+	//if 
 }
 
-void AMonsterManager::DecrementStage(int decrementValue)
+void AMonsterManager::CheckRoaming()
 {
+	
+	if (CurrentStage == EEnemyStage::Roaming)
+	{
+		//Spawn Character - after spawned blackboard should start actions
+		ActiveMonsterPawn = GetWorld()->SpawnActor<AMonsterCharacter>(MonsterToSpawn, SpawnLocations[CurrentSection], FRotator::ZeroRotator);
+		
+		//get ai controller to have access to blackboard
+		AIController = Cast<AMonsterAIController>(ActiveMonsterPawn->GetController());
+		if (AIController)
+		{
+			//set blackboard sound location from value gained from delegate;
+			AIController->GetBlackboardComponent()->SetValueAsVector("SoundPosition", SoundPosition);
+			//set bool to start behavior tree process
+			AIController->GetBlackboardComponent()->SetValueAsBool("CanStart", true);
+		}
+		
+	}
+	
 }
 
-void AMonsterManager::StartRoaming(int spawnIndex)
+void AMonsterManager::OnSoundRecieved(int32 soundVolume)
 {
-	//Spawn Character - after spawned blackboard should start actions
-	ActiveMonsterPawn = GetWorld()->SpawnActor<AMonsterCharacter>(MonsterToSpawn, SpawnLocations[spawnIndex], FRotator::ZeroRotator);
+	//change tier based on soundVolume
+	switch (CurrentStage)
+	{
+	case EEnemyStage::OutofWing: 
+		if (soundVolume == 2){CurrentStage = EEnemyStage::InWing;}
+		else if (soundVolume == 3){CurrentStage = EEnemyStage::Roaming;}
+		CheckRoaming();
+		break;
+	case EEnemyStage::InWing:
+		if (soundVolume == 1){CurrentStage = EEnemyStage::InSection;} 
+		else if (soundVolume == 3 || soundVolume == 2){CurrentStage = EEnemyStage::Roaming;}
+		CheckRoaming();
+		break;
+	case EEnemyStage::InSection:
+		if (soundVolume == 1 || soundVolume == 2 || soundVolume == 3){CurrentStage = EEnemyStage::Roaming;}
+		CheckRoaming();
+		break;
+	case EEnemyStage::Roaming:
+		//set blackboard sound location - will make enemy pathfind to new position if not in chase
+		AIController->GetBlackboardComponent()->SetValueAsVector("SoundPosition", SoundPosition);
+		break;
+	case EEnemyStage::None:
+		break;
+	}
+}
+
+void AMonsterManager::OnSoundRecievedLocation(FVector soundLocation)
+{
+	SoundPosition = soundLocation;
 }
 
 // Called every frame

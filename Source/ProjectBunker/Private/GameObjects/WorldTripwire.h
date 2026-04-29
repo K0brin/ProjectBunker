@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "WorldTripwire.generated.h"
 
+class ASoundManager;
+
 UCLASS()
 class AWorldTripwire : public AActor
 {
@@ -21,7 +23,8 @@ protected:
 
 public:
 	//sound and delayed explosion when collided into
-
+	UPROPERTY(BlueprintReadWrite, EditAnywhere) ASoundManager* SoundManager;
+	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

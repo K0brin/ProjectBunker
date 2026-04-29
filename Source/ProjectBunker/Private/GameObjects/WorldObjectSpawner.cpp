@@ -16,24 +16,6 @@ AWorldObjectSpawner::AWorldObjectSpawner()
 void AWorldObjectSpawner::BeginPlay()
 {
 	Super::BeginPlay();
-
-	//function to check objectToSpawn type - show debug of outline of object in editor
-	
-}
-
-void AWorldObjectSpawner::OnConstruction(const FTransform& Transform)
-{
-	Super::OnConstruction(Transform);
-	FlushPersistentDebugLines(GetWorld());
-	
-	FColor BoxColor = FColor::White;
-	if (SpawnType == ESpawnObjectType::Bottle) {BoxColor = FColor::Green;}
-	else if (SpawnType == ESpawnObjectType::Crate){BoxColor = FColor::Red;}
-	else if (SpawnType == ESpawnObjectType::Tripwire) {BoxColor = FColor::Blue;}
-	else{BoxColor = FColor::Black;}
-	
-	
-	DrawDebugBox(GetWorld(), GetActorLocation(), FVector(20,20,20), BoxColor, true, 1.0f, 0, 2.0f );
 	
 }
 

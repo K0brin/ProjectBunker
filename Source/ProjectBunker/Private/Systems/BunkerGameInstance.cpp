@@ -17,6 +17,7 @@ void UBunkerGameInstance::Init()
 		{UE_LOG(LogTemp, Warning, TEXT("Started spawning"));}
 		CreateSoundManager();
 		CreateMonsterManager();
+		ActiveMonsterManager->SoundManager = ActiveSoundManager;
 		CreateInventoryManager();
 	}
 	else{UE_LOG(LogTemp, Warning, TEXT("did not spawn"));}

@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "WorldCrate.generated.h"
 
+class ASoundManager;
+
 UCLASS()
 class AWorldCrate : public AActor
 {
@@ -21,7 +23,8 @@ protected:
 
 public:
 	//have push functionality and make sound on interval as pushing
-
+	UPROPERTY(BlueprintReadWrite, EditAnywhere) ASoundManager* SoundManager;
+	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
