@@ -37,7 +37,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) TSubclassOf<AActor> MonsterToSpawn;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) AMonsterCharacter* ActiveMonsterPawn = nullptr;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<FVector> SpawnLocations;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 CurrentSection; //used as index for spawn location when spawning in roam
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 CurrentSection = 10; //used as index for spawn location when spawning in roam
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) FVector SoundPosition; //used as index for spawn location when spawning in roam
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) AMonsterAIController* AIController = nullptr;
 	
@@ -48,6 +48,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) ASoundManager* SoundManager;
 	UFUNCTION(BlueprintCallable) void OnSoundRecieved(int32 soundVolume);
 	UFUNCTION(BlueprintCallable) void OnSoundRecievedLocation(FVector soundLocation);
+	UFUNCTION(BlueprintCallable) void InitializeHearing();
 	
 public:	
 	// Called every frame

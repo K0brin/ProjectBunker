@@ -13,6 +13,7 @@ void UBunkerGameInstance::OnStart()
     CreateSoundManager();
     CreateMonsterManager();
     ActiveMonsterManager->SoundManager = ActiveSoundManager;
+	ActiveMonsterManager->InitializeHearing();
     CreateInventoryManager();
 }
 

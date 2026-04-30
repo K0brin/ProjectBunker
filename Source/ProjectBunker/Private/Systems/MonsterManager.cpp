@@ -20,17 +20,6 @@ AMonsterManager::AMonsterManager()
 void AMonsterManager::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	if (SoundManager)
-	{
-		SoundManager->OnSoundEmittedLocation.AddDynamic(this, &AMonsterManager::OnSoundRecievedLocation);
-		SoundManager->OnSoundEmitted.AddDynamic(this, &AMonsterManager::OnSoundRecieved);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("SoundManager reference not found in monster manager"));
-	}
-	
 }
 
 void AMonsterManager::ChangeStage(int soundVolume)
@@ -94,11 +83,26 @@ void AMonsterManager::OnSoundRecieved(int32 soundVolume)
 	case EEnemyStage::None:
 		break;
 	}
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Recieved Sound, Volume: %d"), soundVolume));
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Current Stage: %d"), CurrentStage));
 }
 
 void AMonsterManager::OnSoundRecievedLocation(FVector soundLocation)
 {
 	SoundPosition = soundLocation;
+}
+
+void AMonsterManager::InitializeHearing()
+{
+	if (SoundManager)
+	{
+		SoundManager->OnSoundEmittedLocation.AddDynamic(this, &AMonsterManager::OnSoundRecievedLocation);
+		SoundManager->OnSoundEmitted.AddDynamic(this, &AMonsterManager::OnSoundRecieved);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("SoundManager reference not found in monster manager"));
+	}
 }
 
 // Called every frame
